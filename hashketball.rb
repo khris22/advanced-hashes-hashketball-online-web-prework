@@ -195,7 +195,7 @@ end
 def big_shoe_rebounds
   bigShoeArr = []
 
-  #First, get all the shoe sizes and put them into an array to find out the one with the biggestShoeSize
+  
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
       if attribute == :players
@@ -207,8 +207,7 @@ def big_shoe_rebounds
   end
   biggestShoeSize = bigShoeArr.max
 
-  #Now we are going to use the biggestShoeSize number to select the correct player and grab that player's rebounds stats
-  #One issue with this logic is that if there are multiple players that have tied for the max shoe size
+ 
   reboundStat = nil
   game_hash.each do |location, team_data|
     team_data.each do |attribute, data|
