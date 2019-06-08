@@ -199,11 +199,9 @@ def big_shoe_rebounds
       team.each do |attribute, data|
           if attribute == :players
               data.each do |player, stat|
-                # if player == name
                 stat.each do |sta,v|
                   if sta == :shoe
-                    shoe_size < v
-                    shoe_size = v
+                    shoe_size <= v
                     rebound = game_hash[location][:players][player][:rebounds]
                   end
                 end
