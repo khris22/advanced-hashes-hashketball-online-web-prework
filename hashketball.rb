@@ -224,4 +224,5 @@ def winning_team
   away_total = 0 
   home_total = 0 
   
-game_hash
+game_hash[:away][players].each do |name, stats|
+  away_total += stats[:points]
