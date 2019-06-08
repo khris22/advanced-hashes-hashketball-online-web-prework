@@ -203,7 +203,7 @@ def big_shoe_rebounds
                   if sta == :shoe
                     shoe_size < v
                     shoe_size = v 
-                    rebound = game_hash[location][:players][player][:rebounds]
+                    rebound = game_hash[place][:players][player][:rebounds]
                   end
                 end
              end
