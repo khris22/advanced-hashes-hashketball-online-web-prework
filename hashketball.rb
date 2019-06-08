@@ -193,20 +193,14 @@ def player_stats(players_name)
 end
   
 def big_shoe_rebounds
-  shoe_size = 0 
+  biggest_size = 0 
   rebound = 0 
-  game_hash.each do |place, team|
-      team.each do |attributes, data|
-          if attributes == :players
-              data.each do |player, stat|
-                stat.each do |sta,v|
-                  if sta == :shoe
-                    shoe_size < v
-                    shoe_size = v 
-                    rebound = game_hash[place][:players][player][:rebounds]
-                  end
-                end
-             end
+  
+  game_hash.each do |team, data|
+      data[:players].each do |player|
+          if player[:shoe] > biggest_size
+              biggest_size = player[:shoe]
+              rebound = player[:rebounds]
           end
       end
   end
