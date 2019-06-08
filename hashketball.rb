@@ -193,38 +193,23 @@ def player_stats(players_name)
 end
   
 def big_shoe_rebounds
-  bigShoeArr = []
-
-  
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each do |player, stats|
-          bigShoeArr << shoe_size(player)
-        end
-      end
-    end
-  end
-  biggestShoeSize = bigShoeArr.max
-
- 
-  reboundStat = nil
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      if attribute == :players
-        data.each do |player, stats|
-          stats.each do |stat, statValue|
-            if stat == :shoe
-              if statValue == biggestShoeSize
-                reboundStat = stats[:rebounds]
-              end
-            end
+  shoe_size = 0
+  rebound = 0
+  game_hash.each do |place, team|
+      team.each do |attribute, data|
+          if attribute == :players
+              data.each do |player, stat|
+                # if player == name
+                stat.each do |sta,v|
+                  if sta == :shoe
+                    shoe_size < v
+                    shoe_size = v
+                    rebound = game_hash[location][:players][player][:rebounds]
+                  end
+                end
+             end
           end
-        end
       end
-    end
   end
-  reboundStat
+  rebound
 end
-
-
