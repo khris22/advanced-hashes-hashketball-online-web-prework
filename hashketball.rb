@@ -220,19 +220,19 @@ end
 #   most_points
 # end
 
-def winning_team
-  away_total = 0 
-  home_total = 0 
+# def winning_team
+#   away_total = 0 
+#   home_total = 0 
   
-game_hash[:away][players].each do |name, stats|
-  away_total += stats[:points]
-game_hash[:home][players].each do |name, stats|
-  away_total += stats[:points]
-  if away_total > home_total
-    game_hash[:away][:team_name]
-  elsif away_total < home_total
-    game_hash[:home][:team_name]
-  else
-    "It"
+# game_hash[:away][players].each do |name, stats|
+#   away_total += stats[:points]
+# game_hash[:home][players].each do |name, stats|
+#   away_total += stats[:points]
+#   if away_total > home_total
+#     game_hash[:away][:team_name]
+#   else 
+#     game_hash[:home][:team_name]
+#   end
+# end
 
-end
+# end
