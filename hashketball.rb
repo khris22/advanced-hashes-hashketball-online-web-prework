@@ -230,7 +230,9 @@ game_hash[:home][players].each do |name, stats|
   away_total += stats[:points]
   if away_total > home_total
     game_hash[:away][:team_name]
-  elsif 
+  elsif away_total < home_total
     game_hash[:home][:team_name]
+  else
+    "It"
 
 end
