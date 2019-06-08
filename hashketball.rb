@@ -226,3 +226,4 @@ def winning_team
   
 game_hash[:away][players].each do |name, stats|
   away_total += stats[:points]
+end
