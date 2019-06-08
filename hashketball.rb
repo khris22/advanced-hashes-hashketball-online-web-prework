@@ -220,3 +220,8 @@ end
 #   most_points
 # end
 
+def winning_team
+  away_total = 0 
+  home_total = 0 
+  
+game_hash
